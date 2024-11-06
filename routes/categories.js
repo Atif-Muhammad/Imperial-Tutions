@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const categoriesModel = require('../models/categoriesModel');
 
-
+// Admin/Client
 // 1. all categories---ascending with sortby                         ✔
 // route: /categories?order=-1 -----> (-1 desc & 1 asc)
 router.get('/', async (req, res)=>{
@@ -15,7 +15,7 @@ router.get('/', async (req, res)=>{
         res.send(error)
     }
 });
-
+// Client
 // 2. category by id                                                 ✔  
 // route: /categories/category?id=2
 router.get('/category', async (req, res)=>{
@@ -26,7 +26,7 @@ router.get('/category', async (req, res)=>{
         res.send(error)
     }
 });
-
+// Client
 // 3. enabled categories                                             ✔
 // route: /categories/enabled?order=1 -----> (-1 desc & 1 asc)
 router.get('/enabled', async (req, res)=>{     
@@ -39,6 +39,7 @@ router.get('/enabled', async (req, res)=>{
     }
 });
 
+// Admin
 // 4. All courses of the requested category                          ✔
 // courses are ascending or descending order
 // route: /categories/category/courses?id=1&order=-1
@@ -73,6 +74,7 @@ router.get('/category/courses', async (req, res)=>{
     }
 });
 
+// Client
 // 5. enabled courses of the requested category                      ✔
 // courses in ascending or descending
 // route: /categories/category/courses/enabled?id=1&order=1
