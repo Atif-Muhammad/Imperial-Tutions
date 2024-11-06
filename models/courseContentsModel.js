@@ -15,12 +15,12 @@ const course_contents_schema = mongoose.Schema({
     enabled: Boolean,
     sortby: Number,
     description: String,
-    course_detail_id: [
-        {
-            type: Number,
-            ref: 'course_detail'
-        }
-    ]
+    // course_detail_id: [
+    //     {
+    //         type: Number,
+    //         ref: 'course_detail'
+    //     }
+    // ]
 });
 
 module.exports = mongoose.model('course_content', course_contents_schema);

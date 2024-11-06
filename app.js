@@ -2,8 +2,8 @@ require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-const categoriesRoute = require('./routes/categories');
-const coursesRoute = require('./routes/courses');
+const categoriesRoute = require('./routes/categoriesRoutes');
+const coursesRoute = require('./routes/coursesRoutes');
 
 app.use(express.json());
 

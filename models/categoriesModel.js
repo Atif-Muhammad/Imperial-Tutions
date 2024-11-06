@@ -2,14 +2,17 @@ const mongoose = require('mongoose')
 const course = require('./coursesModel')
 // create category schema
 const category_schema = mongoose.Schema({
-    _id: Number,
-    name: String,
-    enabled: Boolean,
-    sortby: Number,
-    description: String,
-    courses:[
+    _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: ()=> new mongoose.Types.ObjectId()
+    },
+    category_name: String,
+    enabled_flag: Boolean,
+    sort_value: Number,
+    category_description: String,
+    courses: [
         {
-            type: Number,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'course'
         }
     ]
