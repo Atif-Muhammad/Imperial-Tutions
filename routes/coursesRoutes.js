@@ -1,6 +1,7 @@
 const express = require('express');
 const coursesModel = require('../models/coursesModel');
 const categoriesModel = require('../models/categoriesModel');
+const courseDetailsModel = require('../models/courseDetailsModel');
 const router = express.Router();
 
 
@@ -98,7 +99,7 @@ router.get('/details', async (req, res)=>{
 
 // 7. All enabled courses details --- asc and desc
 // route: /courses/details/enabled?order=1
-router.get('/details/enabled', async (req, res)=>{
+router.get('/enabled/details', async (req, res)=>{
     const order_val = req.query.order;
     try {
         const courses_details = await coursesModel.find({enabled: true}).populate("course_details").sort({sortby: Number(order_val)});
@@ -110,7 +111,7 @@ router.get('/details/enabled', async (req, res)=>{
 
 // 8. Course details with course id
 // route: /courses/details/course?id=1
-router.get('/details/course', async (req, res)=>{
+router.get('/course/details', async (req, res)=>{
     const course_id = req.query.id;
     try {
         const courses_details = await coursesModel.find({_id: course_id}).populate("course_details");
@@ -119,6 +120,46 @@ router.get('/details/course', async (req, res)=>{
         res.send(error)
     }
 })
+
+// 9. post course details
+router.post('/course/addDetails', async (req, res)=>{
+    const course_detailss = {
+        course_id: req.query.id,
+        prerequisites: req.query.prerequisites,
+        duration: req.query.duration,
+        course_includes: req.query.course_includes,
+        enabled_flag: req.query.enabled,
+        sort_value: req.query.sort_value
+    };
+    try {
+        const detail_created = await courseDetailsModel.create(course_detailss);
+        try {
+            const updated_course = await coursesModel.updateOne({_id: course_detailss.course_id}, {course_details: detail_created._id});
+            res.send({"details added": updated_course});
+        } catch (error) {
+            res.send(error);
+        }
+    } catch (error) {
+        res.send(error);
+    } 
+});
+
+// 10.delete course details
+router.delete('/course/delDetails', async (req, res)=>{
+    const course_details_id = req.query.id;
+    try {
+        const deleted = await courseDetailsModel.deleteOne({_id: course_details_id}).exec();
+        // remove id from related course document
+        console.log(deleted)
+        const removed_id = await coursesModel.updateOne({course_details: course_details_id}, {$set: {course_details: null}});
+        res.send(removed_id);
+    } catch (error) {
+        res.send(error)
+    }
+
+});
+
+
 
 
 module.exports = router;

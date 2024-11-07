@@ -7,6 +7,10 @@ const courses_schema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         default: () => new mongoose.Types.ObjectId()
     },
+    category_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'category'
+    },
     course_name: String,
     enabled_flag: Boolean,
     sort_value: Number,
@@ -15,14 +19,10 @@ const courses_schema = mongoose.Schema({
     rating: Number,
     course_level: String,
     course_duration: Number, 
-    category_id: {
+    course_details:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'category'
+        ref: 'course_detail'
     }
-    // course_details:{
-    //     type: Number,
-    //     ref: 'course_detail'
-    // }
 })
 
 module.exports = mongoose.model('course', courses_schema);
