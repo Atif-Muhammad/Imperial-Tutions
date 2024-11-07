@@ -35,6 +35,24 @@ router.delete('/category/delCategory', async (req, res)=>{
     }
 });
 
+// update categories
+router.put('/category/update', async (req, res)=>{
+    const id_of_update = req.query.id;
+    const updated_data = {
+        category_name: req.query.name,
+        enabled_flag: req.query.enabled,
+        sort_value: req.query.sortValue,
+        category_description: req.query.description
+    }
+    try {
+        const updated = await categoriesModel.updateOne({_id: id_of_update}, updated_data).exec();
+        res.send(updated)
+    } catch (error) {
+        res.send(error)
+    }
+});
+
+
 // Admin
 // 3. All courses of the requested category                          ✔
 // courses are ascending or descending order
