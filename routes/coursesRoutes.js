@@ -49,6 +49,28 @@ router.delete('/course/delCourse', async (req, res)=>{
     }
 });
 
+// update course
+router.put('/course/update', async (req, res)=>{
+    const id_of_update = req.query.id;
+    const updated_data = {
+        course_name: req.query.name,
+        enabled_flag: req.query.enabled,
+        sort_value: req.query.sortValue,
+        price: req.query.price,
+        course_description: req.query.description,
+        rating: req.query.rating,
+        course_level: req.query.level,
+        course_duration: req.query.duration,
+        category_id: req.query.category_id
+    };
+    try {
+        const updated = await coursesModel.updateOne({_id: id_of_update}, updated_data).exec();
+        res.send(updated);
+    } catch (error) {
+        res.send(error);
+    }
+});
+
 // 3. all courses----- asc or desc
 // route: /courses?order=-1
 router.get('/', async (req, res)=>{
