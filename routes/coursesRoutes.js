@@ -49,7 +49,7 @@ router.delete('/course/delCourse', async (req, res)=>{
     }
 });
 
-// update course
+// 3. update course
 router.put('/course/update', async (req, res)=>{
     const id_of_update = req.query.id;
     const updated_data = {
@@ -71,7 +71,7 @@ router.put('/course/update', async (req, res)=>{
     }
 });
 
-// 3. all courses----- asc or desc
+// 4. all courses----- asc or desc
 // route: /courses?order=-1
 router.get('/', async (req, res)=>{
     const order_val = req.query.order
@@ -83,7 +83,7 @@ router.get('/', async (req, res)=>{
     }
 });
 
-// 4. course by id
+// 5. course by id
 // route: /courses/course?id=2
 router.get('/course', async (req, res)=>{
     const course_id = req.query.id;
@@ -95,9 +95,9 @@ router.get('/course', async (req, res)=>{
     }
 });
 
-// 5. All enabled courses --- asc and desc
-// route: /courses/course/enabled?order=-1
-router.get('/course/enabled', async (req, res)=>{
+// 6. All enabled courses --- asc and desc
+// route: /courses/enabled?order=-1
+router.get('/enabled', async (req, res)=>{
     const order_val = req.query.order;
     try {
         const courses = await coursesModel.find({enabled: true}).sort({sortby: Number(order_val)});
@@ -107,7 +107,7 @@ router.get('/course/enabled', async (req, res)=>{
     }
 });
 
-// 6. All courses details --- asc and desc
+// 7. All courses details --- asc and desc
 // route: /courses/details?order=-1
 router.get('/details', async (req, res)=>{
     const order_val = req.query.order;
@@ -119,7 +119,7 @@ router.get('/details', async (req, res)=>{
     }
 })
 
-// 7. All enabled courses details --- asc and desc
+// 8. All enabled courses details --- asc and desc
 // route: /courses/details/enabled?order=1
 router.get('/enabled/details', async (req, res)=>{
     const order_val = req.query.order;
@@ -131,7 +131,7 @@ router.get('/enabled/details', async (req, res)=>{
     }
 })
 
-// 8. Course details with course id
+// 9. Course details with course id
 // route: /courses/details/course?id=1
 router.get('/course/details', async (req, res)=>{
     const course_id = req.query.id;
@@ -143,7 +143,7 @@ router.get('/course/details', async (req, res)=>{
     }
 })
 
-// 9. post course details
+// 10. post course details
 router.post('/course/addDetails', async (req, res)=>{
     const course_detailss = {
         course_id: req.query.id,
@@ -166,7 +166,7 @@ router.post('/course/addDetails', async (req, res)=>{
     } 
 });
 
-// 10.delete course details
+// 11.delete course details
 router.delete('/course/delDetails', async (req, res)=>{
     const course_details_id = req.query.id;
     try {
@@ -182,7 +182,6 @@ router.delete('/course/delDetails', async (req, res)=>{
 });
 
 
-// after
 
 
 
