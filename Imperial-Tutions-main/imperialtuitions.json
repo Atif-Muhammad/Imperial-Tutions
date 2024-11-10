@@ -1,0 +1,464 @@
+{
+	"catageories":[
+		{
+			"_id":1,
+			"name":"computer science",
+			"enabled":true,
+			"sortby":1,
+			"description": "Artificial Intelligence, Machine Learning, Data Science, Computer Graphics, Cybersecurity, Software Engineering, Networking, Database Systems, Operating Systems, Human-Computer Interaction"
+		},
+        {
+			"_id":10,
+			"name":"islamyat",
+			"enabled":true,
+			"sortby":200,
+			"description": "Artificial Intelligence, Machine Learning, Data Science, Computer Graphics, Cybersecurity, Software Engineering, Networking, Database Systems, Operating Systems, Human-Computer Interaction"
+		},
+		{
+			"_id":2,
+			"name":"chemistry",
+			"enabled":true,
+			"sortby":3,
+			"description": "Organic Chemistry, Inorganic Chemistry, Analytical Chemistry, Physical Chemistry, Biochemistry, Environmental Chemistry, Theoretical Chemistry, Polymer Chemistry, Medicinal Chemistry, Green Chemistry"
+		},
+		{
+			"_id":3,
+			"name":"Physics",
+			"enabled":true,
+			"sortby":4,
+			"description": "Classical Mechanics, Electromagnetism, Thermodynamics, Quantum Mechanics, Relativity, Optics, Astrophysics, Nuclear Physics, Condensed Matter Physics, Particle Physics"
+		},
+		{
+			"_id":4,
+			"name":"Maths",
+			"enabled":true,
+			"sortby":5,
+			"description": "Arithmetic, Algebra, Geometry, Trigonometry, Calculus, Probability and Statistics, Number Theory, Discrete Mathematics, Topology, Mathematical Logic"
+		},
+		{
+			"_id":5,
+			"name":"Biology",
+			"enabled":true,
+			"sortby":2,
+			"description": "Botany, zoology,Topology, Algebra, Geometry, Trigonometry, Calculus, Probability and Statistics, Number Theory, Discrete Mathematics, Topology, Mathematical Logic"
+		},
+		{
+			"_id":6,
+			"name":"English",
+			"enabled":true,
+			"sortby":7,
+			"description": "Botany, zoology,Topology, Algebra, Geometry, Trigonometry, Calculus, Probability and Statistics, Number Theory, Discrete Mathematics, Topology, Mathematical Logic"
+		},
+		{
+			"_id":7,
+			"name":"Urdu",
+			"enabled":true,
+			"sortby":6,
+			"description": "Botany, zoology,Topology, Algebra, Geometry, Trigonometry, Calculus, Probability and Statistics, Number Theory, Discrete Mathematics, Topology, Mathematical Logic"
+		}
+	],
+	"courses":[
+		{
+			"_id":1,
+			"c_id":1,
+			"name":"Java programing",
+			"enabled":true,
+			"sortby":1,
+			"price":10,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":3.5
+
+		},
+		{
+			"c_id":1,
+			"_id":2,
+			"name":"HTML programing",
+			"enabled":true,
+			"sortby":3,
+			"price":15,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":4.5
+
+		},
+		{
+			"c_id":3,
+			"_id":3,
+			"name":"Newton Laws",
+			"enabled":true,
+			"sortby":2,
+			"price":5,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":3.0
+
+		},
+		{
+			"c_id":1,
+			"_id":4,
+			"name":"MySQL",
+			"enabled":true,
+			"sortby":5,
+			"price":12,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":5.5
+
+		},
+		{
+			"c_id":1,
+			"_id":5,
+			"name":"MongoDB",
+			"enabled":true,
+			"sortby":4,
+			"price":20,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":5.0
+
+		},
+		{
+			"c_id":2,
+			"_id":6,	
+			"name":"Atomic Theory",
+			"enabled":true,
+			"sortby":6,
+			"price":14,
+			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ",
+			"rating":4.0
+			
+		}
+	],
+	"course-details":[
+		{
+			"_id":1,
+			"course-id":1,
+			"prerequesits":["HTML","CSS","JS"],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 1,
+					"topic":"Introduction to Programming",
+					"duration":20,
+					"enabled":true,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 1,
+					"topic":"Operators",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 1,
+					"topic":"Loops",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 1,
+					"topic":"Conditions",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 1,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		},
+		{
+			"_id":2,
+			"course-id":2,
+			"prerequesits":[
+				"HTML","CSS","JS"
+					],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 2,
+					"topic":"Introduction to web development",
+					"duration":20,
+					"enabled":true,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 2,
+					"topic":"Basic HTML",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 2,
+					"topic":"Table",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 2,
+					"topic":"Conditions",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 2,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		},
+		{
+			"_id":3,
+			"course-id":3,
+			"prerequesits":[
+				"Newthons","Basic physics","JS"
+					],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 3,
+					"topic":"Introduction to physics",
+					"duration":20,
+					"enabled":true,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 3,
+					"topic":"Basic Physics",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 3,
+					"topic":"Newthons",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 3,
+					"topic":"Alogorithm",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 3,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		},
+		{
+			"_id":4,
+			"course-id":4,
+			"prerequesits":[
+				"Front-end","Back-end","Basic Database"
+					],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 4,
+					"topic":"Introduction to SQL",
+					"duration":20,
+					"enabled":true,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 4,
+					"topic":"Hw to create Table",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 4,
+					"topic":"Loops",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 4,
+					"topic":"Conditions",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 4,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		},
+		{
+			"_id":5,
+			"course-id":5,
+			"prerequesits":[
+				"Best in Database","Front-end","JS"
+					],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 5,
+					"topic":"Introduction to MongoDb",
+					"duration":20,
+					"enabled":false,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 5,
+					"topic":"Operators",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 5,
+					"topic":"Loops",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 5,
+					"topic":"Conditions",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 5,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		},
+		{
+			"_id":6,
+			"course-id":6,
+			"prerequesits":[
+				"Chemistry","Biology","Maths"
+					],
+			"duration":10,
+			"course-includes":["pens","pencils","rubbers"],
+			"contents":[
+				{
+					"_id":1,
+					"details_id": 6,
+					"topic":"Introduction to Chemistry",
+					"duration":20,
+					"enabled":true,
+					"sortby":5,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":2,
+					"details_id": 6,
+					"topic":"Operators",
+					"duration":25,
+					"enabled":true,
+					"sortby":2,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":3,
+					"details_id": 6,
+					"topic":"Loops",
+					"duration":10,
+					"enabled":true,
+					"sortby":3,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":4,
+					"details_id": 6,
+					"topic":"Conditions",
+					"duration":15,
+					"enabled":true,
+					"sortby":4,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				},
+				{
+					"_id":5,
+					"details_id": 6,
+					"topic":"Advance Javascript",
+					"duration":18,
+					"enabled":true,
+					"sortby":1,
+					"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+				}
+			]
+		}
+	]
+}
