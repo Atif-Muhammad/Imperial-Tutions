@@ -15,12 +15,12 @@ const course_details_schema = mongoose.Schema({
     course_includes: Array,
     enabled_flag: Boolean,
     sort_value: Number,
-    // course_contents: [
-    //     {
-    //         type: Number,
-    //         ref: 'course_contents'
-    //     }
-    // ]
+    course_contents: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'course_content'
+        }
+    ]
 
 })
 

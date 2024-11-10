@@ -10,10 +10,10 @@ const coursesModel = require('../models/coursesModel')
 router.post('/addCategory', async (req, res)=>{
     // destructure filed values from request
     const cat_values = {
-        category_name: req.query.name,
-        enabled_flag: req.query.enabled,
-        sort_value: req.query.sortValue,
-        category_description: req.query.description
+        category_name: req.body.params.name,
+        enabled_flag: req.body.params.enabled,
+        sort_value: req.body.params.sortValue,
+        category_description: req.body.params.description
     };
     try {
         const added_category = await categoriesModel.create(cat_values)
@@ -29,10 +29,29 @@ router.delete('/category/delCategory', async (req, res)=>{
     const cat_id = new mongoose.Types.ObjectId(req.query.id);
     try {
         const deleted = await categoriesModel.deleteOne({_id: cat_id}).exec();
-        res.send("deleted", deleted)
+        res.send({"deleted": deleted})
     } catch (error) {
         res.send(error);
     }
+});
+
+
+
+// update categories
+router.put('/category/update', async (req, res) => {
+    const id_of_update = req.body._id;
+    const updated_data = {
+        category_name: req.body.category_name,
+        enabled_flag: req.body.enabled_flag,
+        sort_value: req.body.sort_value,
+        category_description: req.body.category_description
+    }
+    try {
+        const updated = await categoriesModel.updateOne({_id: id_of_update}, updated_data).exec();
+        res.send(updated)
+    } catch (error) {
+        res.send(error)
+}
 });
 
 // Admin
@@ -74,10 +93,11 @@ router.get('/category/courses', async (req, res)=>{
 // Admin/Client
 // 4. all categories---ascending with sortby                         ✔
 // route: /categories?order=-1 -----> (-1 desc & 1 asc)
-router.get('/', async (req, res)=>{
-    const order_val = req.query.order;
+router.get('/', async (req, res) => {
+    // console.log(req.params)
+    const order_val = req.query.order;   
     try {
-        const categories = await categoriesModel.find({}).sort({sortby: Number(order_val)});
+        const categories = await categoriesModel.find({}).sort({sort_value: Number(order_val)});
         res.send(categories)     
     } catch (error) {
         res.send(error)
@@ -100,7 +120,7 @@ router.get('/category', async (req, res)=>{
 router.get('/enabled', async (req, res)=>{     
     const order_val = req.query.order;                       
     try {
-        const enabled_categories = await categoriesModel.find({enabled: true}).sort({sortby: Number(order_val)});
+        const enabled_categories = await categoriesModel.find({enabled_flag: true}).populate('courses').sort({sort_value: Number(order_val)});
         res.send(enabled_categories);
     } catch (error) {
         res.send(error)

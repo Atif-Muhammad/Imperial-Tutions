@@ -1,26 +1,22 @@
 
 const mongoose = require('mongoose');
-// _id
-// topic
-// duration
-// enabled
-// sortby
-// description
-// course_details_id
 
 const course_contents_schema = mongoose.Schema({
-    _id: Number,
+    _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: () => new mongoose.Types.ObjectId()
+    },
     topic: String,
     duration: Number,
-    enabled: Boolean,
-    sortby: Number,
-    description: String,
-    // course_detail_id: [
-    //     {
-    //         type: Number,
-    //         ref: 'course_detail'
-    //     }
-    // ]
+    enabled_flag: Boolean,
+    sort_value: Number,
+    content_description: String,
+    course_detail_id: 
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'course_detail'
+    }
+    
 });
 
 module.exports = mongoose.model('course_content', course_contents_schema);
