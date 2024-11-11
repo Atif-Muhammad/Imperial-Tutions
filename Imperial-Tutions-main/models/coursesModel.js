@@ -1,6 +1,7 @@
-const mongoose = require('mongoose')
-const category = require('./categoriesModel')
-const course_detail = require('./courseDetailsModel')
+const mongoose = require('mongoose');
+const category = require('./categoriesModel');
+const course_detail = require('./courseDetailsModel');
+const inquiry = require('./inquiryModel');
 
 const courses_schema = mongoose.Schema({
     _id: {
@@ -22,7 +23,13 @@ const courses_schema = mongoose.Schema({
     course_details:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'course_detail'
-    }
+    },
+    inquiries: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'inquiry'
+        }
+    ]
 })
 
 module.exports = mongoose.model('course', courses_schema);

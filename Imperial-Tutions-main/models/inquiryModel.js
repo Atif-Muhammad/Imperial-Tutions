@@ -8,8 +8,15 @@ const inquiry_schema = mongoose.Schema({
     },
     inquiry_by: String,
     email: String,
-    replied_flag: Boolean,
-    viewed_flag: Boolean,
+    inquiry: String,
+    replied_flag: {
+        type: Boolean,
+        default: false
+    },
+    viewed_flag: {
+        type: Boolean,
+        default: false
+   },
     for_course: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'course'

@@ -28,7 +28,7 @@ app.use('/categories', categoriesRoute);
 app.use('/courses', coursesRoute);
 
 // 3.  inquiries
-app.use('/inquiry', inquiryRoute);
+app.use('/inquiries', inquiryRoute);
 
 
 app.get('/',(req, res)=>{
